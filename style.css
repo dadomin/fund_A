@@ -295,6 +295,11 @@ footer > .footer-under > p {
 	right: 0;
 	top: 0;
 }
+.rank-div > p {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
 .ranking > button {
 	position: absolute;
 	width: 100%;
@@ -368,7 +373,7 @@ footer > .footer-under > p {
 
 .fund {
 	width: 100%;
-	height: 350px;
+	/*height: 350px;*/
 	background-color: #fff;
 	box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
 	border-radius: 7px;
@@ -460,6 +465,7 @@ footer > .footer-under > p {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	margin-top: 20px;
 }
 #pagination-bar > li {
 	margin: 0 2px;
@@ -520,7 +526,7 @@ footer > .footer-under > p {
 .adapt-notice > h3 {
 	color: #002758;
 	font-weight: 400;
-	font-size: 21px;
+	font-size: 18px;
 	margin-bottom: 7px;
 }
 .adapt-notice > input {
@@ -536,11 +542,10 @@ footer > .footer-under > p {
 	width: 100%;
 	height: 100px;
 	border: none;
-	border-top: 1px solid #2292d1;
-	border-bottom: 1px solid #2292d1;
+	border : 1px solid #2292d1;
 	padding: 20px;
 }
-.adapt > button {
+.ok {
 	width: 350px;
 	height: 50px;
 	background-color: #00c1cc;
@@ -554,6 +559,30 @@ footer > .footer-under > p {
 	transform: translateX(-50%);
 	cursor: pointer;
 }
+
+/*회원가입*/
+
+#fund-register {
+	width: 100%;
+	height: 800px;
+	background-image: url("/images/background.png");
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.register {
+	width: 500px;
+	height: 550px;
+	background-color: #fff;
+	box-shadow: 0px 0px 15px rgba(0,0,0,.1);
+	border-radius: 12px;
+	padding: 20px 70px;
+	position: relative;
+}
+
 
 /*투자자목록*/
 #fund-investor {
@@ -651,4 +680,181 @@ footer > .footer-under > p {
 	flex: 1;
 	text-align: center;
 	color: #002758;
+	display: flex;
+	flex-direction: row; 
+	justify-content: center;
+	align-items: center;
+}
+.investor > div > canvas {
+	border-radius: 7px;
+	margin-right: 5px;
+}
+
+/*반응형*/
+@media (max-width: 480px) {
+
+	body {
+		width: 480px;
+	}
+
+	.size {
+		width: 400px;
+	}
+
+	/*헤더*/
+	header {
+		height: 200px;
+		background-size: cover;
+		background-position: center;
+	}
+
+	header > .size > a > img {
+		width: 250px;
+	}
+
+	header > .size > img {
+		display: none;
+	}
+
+	#login-menu {
+		bottom: 50px;
+	}
+
+	.des {
+		bottom: 15px;
+	}
+
+	/*푸터*/
+	.footer-boxes > .footer-box {
+		margin: 0 30px; 
+	}
+
+	/*메인-비쥬얼*/
+	#visual {
+		height: 500px;
+	}
+
+	#visual > .size {
+		padding-top: 50px;
+		text-align: center;
+	}
+
+	#visual > .size > img {
+		width: 300px;
+		top: unset;
+		bottom: 30px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	/*메인-펀드랭킹*/
+	.ranking-form {
+		width: auto;
+		margin: 0 auto;
+		height: auto; 
+		flex-direction: column;
+	}
+	.ranking {
+		height: 380px;
+		margin-bottom: 20px;
+	}
+
+	/*펀드보기*/
+	.fund {
+		padding: 40px 30px;
+		height: 560px; 	
+		position: relative;
+	}
+	.fund-title {
+		padding-top: 15px;
+		margin-bottom: 15px;
+	}
+	.fund-status {
+		top: -10px;
+	}
+	.fund-views {
+		height: auto;
+		text-align: center;
+		position: relative;
+		margin: 20px auto;
+	}
+	.fund-views > canvas {
+		margin: 0 auto;
+		width: 50%;
+		position: absolute;
+		left: 0;
+	}
+	.fund-notice {
+		width: 50%;
+		height: auto;
+		position: absolute;
+		right: 0;
+		flex-direction: column;
+	}
+	.fund-notice > div {
+		margin-bottom: 20px;
+	}
+	.fund-notice > div > .line50 {
+		margin: 7px auto;
+	}
+	.fund-notice > div > h3 {
+		color: #2292d1;
+	}
+	.fund-btns {
+		width: 100%;
+		height: 30px;
+		left: 0;
+		padding-left: 30px;
+	}
+	.fund-btns > button {
+		padding: 0 50px;
+	}
+	/*펀드등록*/
+	#fund-adapt {
+		height: auto;
+	}
+	.adapt {
+		margin-top: 30px;
+		width: auto;
+		background: none;
+		box-shadow: none;
+	}
+	.adapt-notice > input {
+		background: none;
+	}
+
+	/*회원가입*/
+	#fund-register {
+		height: auto;
+	}
+	.register {
+		margin-top: 30px;
+		background: none;
+		box-shadow: none;
+	}
+
+	/*투자자목록*/
+	.investor-form {
+		flex-direction: row;
+	}
+	.investor-form-title {
+		flex: 1;
+		flex-direction: column;
+		height: 200px;
+		border-top: 2px solid #2292d1;
+		margin-right: 12px;
+	}
+	.investor-form-title > div {
+		display: flex; 
+		justify-content: center;
+		align-items: center;
+	}
+	.investors {
+		flex: 3
+	}
+	.investor {
+		width: 280px;	
+		height: 200px;
+		flex-direction: column;
+	}
 }

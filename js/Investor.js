@@ -1,5 +1,5 @@
 class Investor {
-	constructor(number, name, total, current, eamil, pay, datetime) {
+	constructor(number, name, total, current, email, pay, datetime) {
 		this.number = number; 
 		this.name = name;
 		this.total = total;
